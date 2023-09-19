@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <!-- Login box -->
+            <div class="box-login" id="login">
+                <h3>Login</h3>
+                <div class="top-header">
+                </div>
+                <div class="input-group">
+                   <div class="input-field">
+                    <input type="text" class="input-box" id="LogEmail" required>
+                    <label for="LogEmail">Email address</label>
+                   </div> 
+                   <div class="input-field">
+                    <input type="password" class="input-box" id="LogPassword" required>
+                    <label for="LogPassword">Password</label>
+                    <div class="eye-area">
+                        <div class="eye-box" onclick="myLogPassword()">
+                            <i class="fas fa-eye" id="eye"></i>
+                            <i class="fas fa-eye-slash" id="eye-slash"></i>
+                        </div>
+                    </div>
+                   </div> 
+                   <div class="remember">
+                    <input type="checkbox" id="formcheck" class="check">
+                    <label for="formcheck">Remember Me</label>
+                   </div> 
+                   <div class="input-field">
+                    <input type="submit" class="input-submit" value="Sign in">
+                   </div>
+                   <div class="forgot">
+                    <a href="#">Forgot password</a>
+                   </div>
+                </div>
+            </div>
+            
+            <!-- Register box -->
+            <div class="box-register" id="register">
+                <h3>Sign up</h3>
+                <div class="top-header">
+                </div>
+                <div class="input-group">
+                   <div class="input-field">
+                    <input type="text" class="input-box" id="regEmail" required>
+                    <label for="regEmail">Email address</label>
+                   </div> 
+                   <div class="input-field">
+                     <input type="text" class="input-box" id="regUser" required>
+                     <label for="regUser">User Name</label>
+                   </div> 
+                   <div class="input-field">
+                    <input type="password" class="input-box" id="regPassword" required>
+                    <label for="regPassword">Password</label>
+                    <div class="eye-area">
+                        <div class="eye-box" onclick="myRegPassword()">
+                            <i class="fas fa-eye" id="eye-2"></i>
+                            <i class="fas fa-eye-slash" id="eye-slash-2"></i>
+                        </div>
+                    </div>
+                   </div> 
+                   <div class="remember">
+                    <input type="checkbox" id="formcheck-2" class="check">
+                    <label for="formcheck-2">Remember Me</label>
+                   </div> 
+                   <div class="input-field">
+                    <input type="submit" class="input-submit" value="Sign up">
+                   </div>
+                   <div class="forgot">
+                    <a href="#">Forgot password</a>
+                   </div>
+                </div>
+            </div>
+            
+            <!-- Switch buttons -->
+            <div class="switch">
+                <a href="#" class="login" onclick="switchToLogin()">Login</a>
+                <a href="#" class="register" onclick="switchToRegister()">Register</a>
+                <div class="btn-active" id="btn"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+       var loginBox = document.getElementById('login');
+       var registerBox = document.getElementById('register');
+       var switchButton = document.getElementById('btn');
+
+       function switchToLogin() {
+        loginBox.style.left = "0px";
+        registerBox.style.left = "400px";
+        switchButton.style.left = "0px";
+       }
+
+       function switchToRegister() {
+        loginBox.style.left = "-400px";
+        registerBox.style.left = "0px";
+        switchButton.style.left = "100px";
+       }
+
+       // Add your password visibility toggling functions here (myLogPassword, myRegPassword).
+    </script>
+</body>
+</html>
